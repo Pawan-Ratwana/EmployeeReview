@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    margin-top: 5%;
+}
+input{
+    padding: 5px;
+    margin: 4px;
+    font-size: 15px;
+    width: 25%;
+
+}
+#button{
+    padding: 3px;
+    width: 10%;
+}

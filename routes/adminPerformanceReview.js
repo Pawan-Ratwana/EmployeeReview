@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');
+const admin = require('../controller/admin');
+const adminAction = require('../controller/adminAction');
+router.get('/dashBoard' ,passport.checkAuthentication, admin.adminPerformancePage);
+router.get('/:id',passport.checkAuthentication, adminAction.adminPerformanceAddPage);
+router.post('/add_review' ,passport.checkAuthentication, adminAction.addReview);
+router.post('/update_feedback',passport.checkAuthentication,adminAction.updateFeedback);
+module.exports = router;

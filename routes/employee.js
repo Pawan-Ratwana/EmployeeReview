@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const passport = require('passport');
+const employee = require('../controller/employee');
+router.post('/register' , employee.register);
+router.get('/signUp' , employee.signup);
+router.get('/perfromancelist' ,passport.checkAuthentication, employee.performanceReviewList);
+router.get('/:id' ,passport.checkAuthentication, employee.feedbackPage);
+router.post('/feedback',passport.checkAuthentication , employee.submitFeedback);
+module.exports = router;

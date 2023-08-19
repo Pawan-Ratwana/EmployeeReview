@@ -1,0 +1,33 @@
+{
+  "name": "employeereview",
+  "version": "1.0.0",
+  "description": "This application allows employee to submit feedback about each other",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Pawan Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.22",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
+  }
+}

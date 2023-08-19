@@ -1,0 +1,30 @@
+/* design navigation bar */
+.nav{
+    margin-top: -5px;
+    padding: 8px;
+    height:4%;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .nav > a{
+      font-size: 20px;
+      color: aliceblue;
+      padding: 8px;
+      text-decoration:none
+  }
+#loginForEmployees{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#email, #password, #role{
+    padding: 5px;
+    margin: 4px;
+    font-size: 15px;
+    width: 25%;
+
+}
+#button{
+    padding: 3px;
+    width: 10%;
+}

@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/submitfeedback.css">
+<div id="submitFeedBack">
+    <h1>Submit feedback : </h1>
+    <form action="/employee/feedback" , method="POST">
+        <input type="text" , name="problemSolving" placeholder="Enter The Communication Details" required><br><br>
+        <input type="text" , name="teamwork" placeholder="Enter Details About Teamwork" required><br><br>
+        <input type="text" , name="communication" placeholder="Enter Communication Details" required><br><br>
+        <input type="text" , name="accuracyOfWork" placeholder="Enter About Accuracy" required><br><br>
+        <input type="hidden" , name="employees" value="<%= id%>">
+        <input type="text" , name="attendance" placeholder="Enter Attendance" required><br><br>
+        <button id="button">submit</button>
+    </form>
+</div>

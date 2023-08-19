@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/css/adminEmployee.css">
+<div class="nav">
+    <a class="active" href="#">Home</a>
+    <a href="/admin_performance/dashBoard">Feedback</a>
+    <a href="/destroy_session">SignOut</a>
+</div>
+<section>
+
+    <div id="employeeData">
+        <h1>List Of Employee : </h1>
+        <table>
+            <tr>
+                <th>SNo: </th>
+                <th>Name </th>
+                <th>Email </th>
+                <th>Mobile No</th>
+                <th>City</th>
+                <th>Password </th>
+            </tr>
+
+            <% for(var i=0; i<allEmployee.length; i++) {%>
+                <tr>
+                    <td>
+                        <%= i+1 %>
+                    </td>
+                    <td>
+                        <%= allEmployee[i].name %>
+                    </td>
+                    <td>
+                        <%= allEmployee[i].email %>
+                    </td>
+                    <td>
+                        <%= allEmployee[i].mobile%>
+                    </td>
+                    <td>
+                        <%= allEmployee[i].city%>
+                    </td>
+                    <td>
+                        <%= allEmployee[i].password%>
+                    </td>
+
+                </tr>
+                <% } %>
+                    </tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <h1>Perform Action On Employee :</h1>
+    <ul>
+        <h1> Add Employee</h1>
+        <form action="/admin_employee/add_employee" , method="POST">
+            <li>
+                <input id="name" type="text" name="name" placeholder="Enter The Name" required>
+                <input id="email" type="text" name="email" placeholder="Enter The Email" required>
+                <input id="password" type="text" name="password" placeholder="Enter The Password">
+                <button id="button">Add Employee</button>
+            </li>
+        </form>
+        <!-- delete -->
+        <h1> Delete Employee</h1>
+        <form action="/admin_employee/delete_employee" , method="POST">
+            <li>
+                <input id="name" type="text" name="name" placeholder="Enter The Name" required>
+                <input id="email" type="text" name="email" placeholder="Enter The Email" required>
+                <input id="password" type="text" name="password" placeholder="Enter The Password" required>
+                <button id="button">Delete Employee</button>
+            </li>
+        </form>
+        <!-- update -->
+        <h1> Update Employee</h1>
+        <form action="/admin_employee/update_employee" , method="POST">
+            <li>
+                <input id="name" type="text" name="name" placeholder="Enter The Name" required>
+                <input id="email" type="text" name="email" placeholder="Enter The Email" required>
+                <input id="password" type="text" name="password" placeholder="Enter The Password" required>
+                <button id="button">Update Employee</button>
+            </li>
+        </form>
+
+        <!-- assign employee for feedback of another employee -->
+        <h1> Assign Employee For Feedback</h1>
+        <form action="/admin_employee/assign_employee" , method="POST">
+
+            <li>
+                <input id="toEmployee" type="text" name="toEmployeeEmail" placeholder="Enter To Employee Email"
+                    required>
+                <input id="forEmployee" type="text" name="fromEmployeeEmail" placeholder="Enter For Employee Email"
+                    required>
+                <button id="button">Assign Feedback</button>
+            </li>
+        </form>
+        <h1> Make Employee As Admin</h1>
+        <form action="/assign_admin" , method="POST">
+            <li>
+                <input id="email" type="text" name="email" placeholder="Enter The Employee Email" required>
+                <input id="password" type="text" name="password" placeholder="Enter The Password" required>
+                <button id="button">Make Admin</button>
+            </li>
+        </form>
+
+
+    </ul>
+</section>

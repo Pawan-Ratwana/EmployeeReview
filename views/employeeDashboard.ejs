@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/employeedashboard.css">
+<div class="nav">
+    <a href="#">Home</a>
+    <a href="/destroy_session">SignOut</a>
+</div>
+<div id="employeeData">
+    <h1>List of performance review : </h1>
+    <table>
+        <tr>
+            <th>SNo : </th>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Action </th>
+        </tr>
+
+        <% for(var i=0; i<allEmployee.length; i++) {%>
+            <tr>
+                <td>
+                    <%= i+1 %>
+                </td>
+                <td>
+                    <%= allEmployee[i].name %>
+                </td>
+                <td>
+                    <%= allEmployee[i].email %>
+                </td>
+                <% if(allEmployee[i].like==false){ %>
+                    <td><button><a href="/employee/<%= allEmployee[i].id %>"> Feedback</button></td>
+                    <% }else{ %>
+                        <td><button><a href="#">Done !!</button></td>
+                        <%}%>
+            </tr>
+            <% } %>
+    </table>
+</div>
+</body>

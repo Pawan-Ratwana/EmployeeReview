@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/adminPerformanceAction.css">
+<div class="nav">
+    <a href="#">Home</a>
+</div>
+<div id="actionData">
+    <div id="addfeedback">
+        <h1>Add Feedback :</h1>
+        <form action="/admin_performance/add_review" , method="POST">
+            <input type="hidden" , name="employees" value="<%= id%>">
+            <input type="text" , name="problemSolving" placeholder="Enter The Communication Details" required><br><br>
+            <input type="text" , name="teamwork" placeholder="Enter Details About Teamwork" required><br><br>
+            <input type="text" , name="communication" placeholder="Enter Communication Details" required><br><br>
+            <input type="text" , name="accuracyOfWork" placeholder="Enter About Accuracy" required><br><br>
+            <input type="text" , name="attendance" placeholder="Enter Attendance" required><br><br>
+            <button id="button">Add Feedback</button>
+        </form>
+    </div>
+    <div id="updateFeedback">
+        <h1>Update Feedback :</h1>
+        <form action="/admin_performance/update_feedback" , method="POST">
+            <input type="hidden" , name="employees" value="<%= id%>">
+            <input type="text" , name="problemSolving" placeholder="Enter The Communication Details" required><br><br>
+            <input type="text" , name="teamwork" placeholder="Enter Details About Teamwork" required><br><br>
+            <input type="text" , name="communication" placeholder="Enter Communication Details" required><br><br>
+            <input type="text" , name="accuracyOfWork" placeholder="Enter About Accuracy" required><br><br>
+            <input type="text" , name="attendance" placeholder="Enter Attendance" required><br><br>
+            <button id="button">update Feedback</button>
+        </form>
+    </div>
+</div>
+</div>

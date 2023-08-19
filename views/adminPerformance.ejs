@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="/css/adminPerformance.css">
+<div class="nav">
+    <a href="/admin_employee/employee_dashboard">Home</a>
+    <a href="#">Feedback</a>
+</div>
+<div>
+    <h1>Employee List : </h1>
+    <table>
+        <tr>
+            <th>SNo </th>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Action Tab</th>
+        </tr>
+        <% for(var i=0 ; i< employeeList.length ; i++) { %>
+            <tr>
+                <td>
+                    <%= i + 1%>
+                </td>
+                <td>
+                    <%= employeeList[i].name %>
+                </td>
+                <td>
+                    <%= employeeList[i].email %>
+                </td>
+                <td><button><a href="/admin_performance/<%= employeeList[i].id %>">AddFeedback</a></button></td>
+            </tr>
+            <% } %>
+    </table>
+    <h1>Feedback List For Employee : </h1>
+    <table>
+        <tr>
+            <th>SNo </th>
+            <th>Name </th>
+            <th>Email </th>
+            <th>ProblemSolving </th>
+            <th>Teamwork </th>
+            <th>Communication </th>
+            <th>Accuracy Of Work </th>
+            <th>Attendence </th>
+            <th>Action Tab</th>
+        </tr>
+        <% for(var i=0 ; i< list.length ; i++) { %>
+            <tr>
+                <td>
+                    <%= i + 1 %>
+                </td>
+                <td>
+                    <%=list[i].employees.name %>
+                </td>
+                <td>
+                    <%=list[i].employees.email %>
+                </td>
+                <td>
+                    <%=list[i].problemSolving %>
+                </td>
+                <td>
+                    <%=list[i].teamwork %>
+                </td>
+                <td>
+                    <%=list[i].communication %>
+                </td>
+                <td>
+                    <%=list[i].accuracyOfWork %>
+                </td>
+                <td>
+                    <%=list[i].attendance %>
+                </td>
+                <td><button> <a href="/admin_performance/<%=list[i].employees.id %>">Update Feedback</button></td>
+            </tr>
+
+            <% } %>
+
+    </table>
+</div>
