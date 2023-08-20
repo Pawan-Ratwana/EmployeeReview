@@ -44,12 +44,20 @@
             <tr>
                 <td>
                     <%= i + 1 %>
-                </td>
-                <td>
-                    <%=list[i].employees.name %>
-                </td>
-                <td>
-                    <%=list[i].employees.email %>
+                                   </td>
+                                   <td>
+                                       <% if (list[i].employees) { %>
+                                           <%= list[i].employees.name %>
+                                       <% } else { %>
+                                        <% } %>
+                                   </td>
+                                   <td>
+                                       <% if (list[i].employees) { %>
+                                           <%= list[i].employees.email %>
+                                       <% } else { %>
+                                           N/A
+                                       <% } %>
+                    
                 </td>
                 <td>
                     <%=list[i].problemSolving %>
@@ -66,7 +74,14 @@
                 <td>
                     <%=list[i].attendance %>
                 </td>
-                <td><button> <a href="/admin_performance/<%=list[i].employees.id %>">Update Feedback</button></td>
+                <td>
+                    <% if (list[i].employees) { %>
+                        <button> <a href="/admin_performance/<%=list[i].employees.id %>">Update Feedback</a></button>
+                    <% } else { %>
+                        N/A
+                    <% } %>
+                </td>
+                
             </tr>
 
             <% } %>
