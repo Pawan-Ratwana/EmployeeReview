@@ -24,11 +24,12 @@
                 <td>
                     <%= allEmployee[i].email %>
                 </td>
-                <% if(allEmployee[i].like==false){ %>
-                    <td><button><a href="/employee/<%= allEmployee[i].id %>"> Feedback</button></td>
-                    <% }else{ %>
-                        <td><button><a href="#">Done !!</button></td>
-                        <%}%>
+                <% if (allEmployee[i].like == false) { %>
+                    <td><button><a href="/employee/<%= allEmployee[i].id %>"> Feedback</a></button></td>
+                <% } else { %>
+                    <td><button><a href="#">Done !!</a></button></td>
+                <% } %>
+                
             </tr>
             <% } %>
     </table>
